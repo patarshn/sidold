@@ -8,7 +8,7 @@
         <div class="col-lg">
             <div class="row isi-berita">
                 <div class="col-lg konten-berita">
-                    <img src="img/news/1.jpg" alt="News 1" class="float-left">
+                    <img src="<?=base_url('assets/my/img/news/1.jpg')?>" alt="News 1" class="float-left">
                     <span>Kamis, 6 Februari 2020</span>
                     <h6>Judul</h6>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cupiditate sint nihil vel voluptate architecto veritatis libero tempore ex reiciendis nemo necessitatibus, autem voluptates provident deserunt facere explicabo saepe repellat?</p>
@@ -19,7 +19,7 @@
             </div>
             <div class="row isi-berita">
                 <div class="col-lg konten-berita">
-                    <img src="img/news/2.jpg" alt="News 2" class="float-left">
+                    <img src="<?=base_url('assets/my/img/news/2.jpg')?>" alt="News 2" class="float-left">
                     <span>Kamis, 6 Februari 2020</span>
                     <h6>Judul</h6>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cupiditate sint nihil vel voluptate architecto veritatis libero tempore ex reiciendis nemo necessitatibus, autem voluptates provident deserunt facere explicabo saepe repellat?</p>
@@ -30,7 +30,7 @@
             </div>
             <div class="row isi-berita">
                 <div class="col-lg konten-berita">
-                    <img src="img/news/3.jpg" alt="News 3" class="float-left">
+                    <img src="<?=base_url('assets/my/img/news/3.jpg')?>" alt="News 3" class="float-left">
                     <span>Kamis, 6 Februari 2020</span>
                     <h6>Judul</h6>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, cupiditate sint nihil vel voluptate architecto veritatis libero tempore ex reiciendis nemo necessitatibus, autem voluptates provident deserunt facere explicabo saepe repellat?</p>

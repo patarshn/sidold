@@ -1,3 +1,4 @@
+
 <!-- JUMBOTRON -->
 <div class="jumbotron jumbotron-fluid" style="background-image: url(<?=$jumbotron;?>);">
     <div class="jumbotron-overlay d-flex">

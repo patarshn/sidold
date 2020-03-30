@@ -1,3 +1,4 @@
+
 <!-- CAROUSEL -->
 <section id="intro">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -8,7 +9,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/carousel/1.jpg" class="d-block myw-100" alt="">
+                <img src="<?=base_url('assets/my/img/carousel/1.jpg')?>" class="d-block myw-100" alt="">
                 <div class="black-overlay">
                     <div class="carousel-caption d-md-block">
                         <h5>First slide label</h5>
@@ -17,7 +18,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/carousel/2.jpg" class="d-block myw-100" alt="">
+                <img src="<?=base_url('assets/my/img/carousel/2.jpg')?>" class="d-block myw-100" alt="">
                 <div class="black-overlay">
                     <div class="carousel-caption d-md-block">
                         <h5>Second slide label</h5>
@@ -26,7 +27,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/carousel/3.jpg" class="d-block myw-100" alt="">
+                <img src="<?=base_url('assets/my/img/carousel/3.jpg')?>" class="d-block myw-100" alt="">
                 <div class="black-overlay">
                     <div class="carousel-caption d-md-block">
                         <h5>Third slide label</h5>

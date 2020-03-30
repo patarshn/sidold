@@ -8,16 +8,16 @@
         <div class="col-lg">
             <div class="row">
                 <div class="col-lg-5 galeri">
-                   <img src="img/2.jpg" alt="Image 1">
+                   <img src="<?=base_url('assets/my/img/2.jpg')?>" alt="Image 1">
                 </div>
                 <div class="col-lg-5 galeri">
-                   <img src="img/5.jpg" alt="Image 2">
+                   <img src="<?=base_url('assets/my/img/5.jpg')?>" alt="Image 2">
                 </div>
                 <div class="col-lg-5 galeri">
-                   <img src="img/4.jpg" alt="Image 3">
+                   <img src="<?=base_url('assets/my/img/4.jpg')?>" alt="Image 3">
                 </div>
                 <div class="col-lg-5 galeri">
-                   <img src="img/carousel/1.jpg" alt="Image 4">
+                   <img src="<?=base_url('assets/my/img/carousel/1.jpg')?>" alt="Image 4">
                 </div>
             </div>
         </div>

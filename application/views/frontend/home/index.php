@@ -10,7 +10,7 @@
             <div class="col-3-lg">
                 <a href="form/form_kk.php">
                 <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <img src="img/9.jpg" class="card-img-top" alt="product 1">
+                    <img src="<?=base_url('assets/my/img/9.jpg')?>" class="card-img-top" alt="product 1">
                     <div class="card-body">
                         <h6>Form KK</h6>
                     </div>
@@ -20,7 +20,7 @@
             <div class="col-3-lg">
             <a href="form/form_ktp.php">
                 <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <img src="img/3.jpg" class="card-img-top" alt="product 2">
+                    <img src="<?=base_url('assets/my/img/3.jpg')?>" class="card-img-top" alt="product 2">
                     <div class="card-body">
                         <h6>Form KTP</h6>
                     </div>
@@ -30,7 +30,7 @@
             <div class="col-3-lg">
             <a href="form/form_izinusaha.php">
                 <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <img src="img/1.jpg" class="card-img-top" alt="product 3">
+                    <img src="<?=base_url('assets/my/img/1.jpg')?>" class="card-img-top" alt="product 3">
                     <div class="card-body">
                         <h6>Form Izin Usaha</h6>
                     </div>
@@ -40,7 +40,7 @@
             <div class="col-3-lg">
             <a href="form/form_kelahiran.php">
                 <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <img src="img/7.jpg" class="card-img-top" alt="product 4">
+                    <img src="<?=base_url('assets/my/img/7.jpg')?>" class="card-img-top" alt="product 4">
                     <div class="card-body">
                         <h6>Form Kelahiran</h6>
                     </div>
@@ -61,7 +61,7 @@
                 <div class="row mt-3 justify-content-center">
                     <div class="col-lg mb-4">
                             <div class="card" style="border:0;">
-                                <img src="img/news/1.jpg" class="card-img-top" alt="">
+                                <img src="<?=base_url('assets/my/img/news/1.jpg')?>" class="card-img-top" alt="">
                                     <div class="card-body">
                                         <h5>Lorem Ipsum</h5>
                                         <span>15 Januari 2020</span>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-lg mb-4">
                             <div class="card" style="border:0;">
-                                <img src="img/news/2.jpg" class="card-img-top" alt="">
+                                <img src="<?=base_url('assets/my/img/news/2.jpg')?>" class="card-img-top" alt="">
                                     <div class="card-body">
                                         <h5>Lorem Ipsum</h5>
                                         <span>15 Januari 2020</span>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="col-lg mb-4">
                             <div class="card" style="border:0;">
-                                <img src="img/news/3.jpg" class="card-img-top" alt="">
+                                <img src="<?=base_url('assets/my/img/news/3.jpg')?>" class="card-img-top" alt="">
                                     <div class="card-body">
                                         <h5>Lorem Ipsum</h5>
                                         <span>15 Januari 2020</span>
@@ -159,22 +159,22 @@
     </div>
     <div class="row mt-3">
         <div class="col-lg-4 col-6 p-0 m-0 galeri">
-            <img src="img/carousel/1.jpg" alt="image 1">
+            <img src="<?=base_url('assets/my/img/carousel/1.jpg')?>" alt="image 1">
         </div>
         <div class="col-lg-4 col-6 p-0 m-0 galeri">
-            <img src="img/carousel/2.jpg" alt="image 2">
+            <img src="<?=base_url('assets/my/img/carousel/2.jpg')?>" alt="image 2">
         </div>
         <div class="col-lg-4 col-6 p-0 m-0 galeri">
-            <img src="img/carousel/3.jpg" alt="image 3">
+            <img src="<?=base_url('assets/my/img/carousel/3.jpg')?>" alt="image 3">
         </div>
         <div class="col-lg-4 col-6 p-0 m-0 galeri">
-            <img src="img/2.jpg" alt="image 4">
+            <img src="<?=base_url('assets/my/img/2.jpg')?>" alt="image 4">
         </div>
         <div class="col-lg-4 col-6 p-0 m-0 galeri">
-            <img src="img/4.jpg" alt="image 5">
+            <img src="<?=base_url('assets/my/img/4.jpg')?>" alt="image 5">
         </div>
         <div class="col-lg-4 col-6 p-0 m-0 galeri">
-            <img src="img/5.jpg" alt="image 6">
+            <img src="<?=base_url('assets/my/img/5.jpg')?>" alt="image 6">
         </div>
     </div>
     <div class="row justify-content-center">

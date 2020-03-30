@@ -31,7 +31,7 @@
             </div>
             <div class="row mb-3 contact">
                 <div class="col-1 icon">
-                    <img src="img/icon/Icon zocial-email.png" alt="Email">
+                    <img src="<?=base_url('assets/my/img/icon/Icon zocial-email.png')?>" alt="Email">
                 </div>
                 <div class="col">
                     <span>company@gmail.com</span>
@@ -47,9 +47,9 @@
             </div>
             <div class="row mb-3 pl-3 contact">
                 <div class="social-media">
-                    <img src="img/icon/Icon simple-facebook.png" alt="Facebook">
-                    <img src="img/icon/Icon awesome-instagram.png" alt="Instagram">
-                    <img src="img/icon/Icon awesome-twitter.png" alt="Twitter">
+                    <img src="<?=base_url('assets/my/img/icon/Icon simple-facebook.png')?>" alt="Facebook">
+                    <img src="<?=base_url('assets/my/img/icon/Icon awesome-instagram.png')?>" alt="Instagram">
+                    <img src="<?=base_url('assets/my/img/icon/Icon awesome-twitter.png')?>" alt="Twitter">
                 </div>
             </div>
         </div>

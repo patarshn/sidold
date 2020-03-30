@@ -27,5 +27,13 @@
                 </div>
             </div>
         </form>
+
+        <script>
+        function showPage() {
+            var sel = document.getElementById('layanan');
+            var option = sel.options[sel.selectedIndex].value;
+            window.location.href="form/"+option;
+        }
+        </script>
 </div>
 <!-- END CONTENT -->
