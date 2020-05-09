@@ -3,7 +3,12 @@
     <div class="row" style="margin-left:0; margin-right:0;">
         <div class="col-lg-8 col-12 konten-form">
             <div class="row">
-            <form>
+            <?php if($this->session->flashdata('success_message')): ?>
+	            <div class="alert alert-success col" id="success-message"><?= $this->session->flashdata('success_message');?></div>
+            <?php elseif($this->session->flashdata('error_message')): ?>
+                <div class="alert alert-danger col" id="success-message"><?= $this->session->flashdata('error_message');?></div>
+		    <?php endif;?>
+            <form method="POST" action="<?=base_url('form_domisili/store')?>">
                 <h3>Form Keterangan Domisili</h3>
                 <div class="form-row">
                     <div class="col-lg-6">
@@ -50,8 +55,9 @@
                         <input type="text" name="captcha" class="form-control" placeholder="Masukkan Captcha">
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary active-button">Simpan</button>
             </form>
-            <button type="submit" class="btn btn-primary active-button">Simpan</button>
+            
             </div>
         </div>
     </div>

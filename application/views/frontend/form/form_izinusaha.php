@@ -3,7 +3,13 @@
     <div class="row" style="margin-left:0; margin-right:0;">
         <div class="col-lg-8 col-12 konten-form">
             <div class="row">
-            <form>
+            <div class="row">
+            <?php if($this->session->flashdata('success_message')): ?>
+	            <div class="alert alert-success col" id="success-message"><?= $this->session->flashdata('success_message');?></div>
+            <?php elseif($this->session->flashdata('error_message')): ?>
+                <div class="alert alert-danger col" id="success-message"><?= $this->session->flashdata('error_message');?></div>
+		    <?php endif;?>
+            <form method="POST" action="<?=base_url('form_izinusaha/store')?>">
                 <h3>Form Izin Usaha</h3>
                 <div class="form-row">
                     <div class="col-lg-6">
@@ -11,8 +17,8 @@
                         <input type="text" name="nik" class="form-control" placeholder="NIK">
                     </div>
                     <div class="col-lg-6">
-                        <label for="nama">Nama Pemilik Usaha</label>
-                        <input type="text" name="nama_usaha" class="form-control" placeholder="Nama Pemilik Usaha">
+                        <label for="nama">Nama</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Nama">
                     </div>
                     <div class="col-lg-12">
                         <label for="jenis">Jenis Usaha</label>
@@ -39,8 +45,9 @@
                         <input type="text" name="captcha" class="form-control" placeholder="Masukkan Captcha">
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary active-button">Simpan</button>
             </form>
-            <button type="submit" class="btn btn-primary active-button">Simpan</button>
+            
             </div>
         </div>
     </div>

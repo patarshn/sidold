@@ -3,21 +3,26 @@
     <div class="row" style="margin-left:0; margin-right:0;">
         <div class="col-lg-8 col-12 konten-form">
             <div class="row">
-            <form>
+            <?php if($this->session->flashdata('success_message')): ?>
+	            <div class="alert alert-success col" id="success-message"><?= $this->session->flashdata('success_message');?></div>
+            <?php elseif($this->session->flashdata('error_message')): ?>
+                <div class="alert alert-danger col" id="success-message"><?= $this->session->flashdata('error_message');?></div>
+		    <?php endif;?>
+            <form method="POST" action="<?=base_url('form_kematian/store')?>">
                 <h3>Form Keterangan Kematian</h3>
                 <div class="form-row">
                     <div class="col-lg-6">
                         <label for="nik">NIK</label>
-                        <input type="text" name="nik" class="form-control" placeholder="NIK">
+                        <input type="text" name="nik" class="form-control" placeholder="NIK" required>
                     </div>
                     <div class="col-lg-6">
-                        <label for="nama">Nama</label>
-                        <input type="text" name="nama" class="form-control" placeholder="Nama" readonly>
+                          <label for="nama">Nama</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Nama" readonly >
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label for="alamat">Alamat</label>
-                            <textarea name="alamat" class="form-control" id="alamat" rows="3"></textarea>
+                            <textarea name="alamat" class="form-control" id="alamat" rows="3" required></textarea>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -54,7 +59,7 @@
                     </div>
                     <div class="col-lg-6">
                         <label for="tempat_kematian">Tempat Kematian</label>
-                        <input type="text" name="tempat_kematian" class="form-control" placeholder="mm/dd/yy">
+                        <input type="text" name="tempat_kematian" class="form-control" placeholder="Tempat Kematian">
                     </div>
                     <div class="col-lg-6">
                         <label for="penyebab">Penyebab Kematian</label>
@@ -66,8 +71,9 @@
                         <input type="text" name="captcha" class="form-control" placeholder="Masukkan Captcha">
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary active-button">Simpan</button>
             </form>
-            <button type="submit" class="btn btn-primary active-button">Simpan</button>
+            
             </div>
         </div>
     </div>

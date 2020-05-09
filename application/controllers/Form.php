@@ -3,9 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Form extends Frontend_Controller{
 
+
     function __construct()
 	{
-		parent::__construct();
+        parent::__construct();
+        //$this->load->model('frontend/Form_M');
     }    
     
     function index(){
@@ -34,6 +36,9 @@ class Form extends Frontend_Controller{
         {
                 $this->form($url);
         }
+        elseif (function_exists('ayam')){
+            echo "ANJAY";
+        }
         else
         {
                 $this->index();
@@ -57,6 +62,11 @@ class Form extends Frontend_Controller{
         elseif($url == "form_waris"){$data = array("jumbotron" => "","title" => "Form Waris",);}
         
         return $data;
+    }
+
+    //ACTION
+    public function store_form_belummenikah(){
+
     }
 
 }

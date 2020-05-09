@@ -32,7 +32,7 @@
         function showPage() {
             var sel = document.getElementById('layanan');
             var option = sel.options[sel.selectedIndex].value;
-            window.location.href="form/"+option;
+            window.location.href=option;
         }
         </script>
 </div>
