@@ -397,6 +397,17 @@ a{
     border-color: var(--second-color);
 }
 
+.berita span{
+    font-size: 13px;
+    color: var(--main-color);
+}
+
+.berita img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
 
 /* FOOTER */
 
