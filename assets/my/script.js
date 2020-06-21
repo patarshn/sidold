@@ -1,3 +1,5 @@
+/*
+
 $('#about-1').on('click', function() { 
     $('div.show-item').removeClass('show-item').addClass('hide-item');
     $('a.active-button').removeClass('active-button');
@@ -16,3 +18,4 @@ $('#about-3').on('click', function() {
     $('#management').removeClass('hide-item').addClass('show-item');
     $('#about-3').addClass('active-button');
 });
+*/

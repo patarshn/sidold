@@ -25,7 +25,7 @@ class Form_IzinUsaha extends Frontend_Controller{
 
         $jumbotron = array(
             "jumbotron" => "",
-            "title" => "Form Kartu Tanda Penduduk"
+            "title" => "Form Izin Usaha"
         );
 
         $this->load->view('frontend/partials/header');

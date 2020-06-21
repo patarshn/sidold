@@ -1,14 +1,15 @@
 <!-- CONTENT -->
 <div class="container mt-3">
+
     <div class="row" style="margin-left:0; margin-right:0;">
         <div class="col-lg-8 col-12 konten-form">
             <div class="row">
             <?php if($this->session->flashdata('success_message')): ?>
 	            <div class="alert alert-success col" id="success-message"><?= $this->session->flashdata('success_message');?></div>
-            <?php elseif($this->session->flashdata('error_message')): ?>
-                <div class="alert alert-danger col" id="success-message"><?= $this->session->flashdata('error_message');?></div>
-		    <?php endif;?>
-            <form method="POST" action="<?=base_url('form_ktp/store')?>">
+            <?php endif ?>
+                <div class="alert alert-danger col d-none" id="error-message"></div>
+                
+            <form method="POST" id="form" action="<?=base_url('form_ktp/store')?>">
                 <h3>Form Surat Pengantar KTP</h3>
                 <div class="form-row">
                     <div class="col-lg-6">
@@ -27,47 +28,47 @@
                     </div>
                     <div class="col-lg-6">
                         <label for="tempat_lahir">Tempat Lahir</label>
-                        <input type="text" name="tempat_lahir" class="form-control" placeholder="Tempat Lahir" readonly>
+                        <input type="text" name="tempat_lahir" class="form-control" placeholder="Tempat Lahir" >
                     </div>
                     <div class="col-lg-6">
                         <label for="tanggal_lahir">Tanggal Lahir</label>
-                        <input type="date" name="tanggal_lahir" class="form-control" placeholder="mm/dd/yy" readonly>
+                        <input type="date" name="tanggal_lahir" class="form-control" placeholder="mm/dd/yy" >
                     </div>
                     <div class="col-lg-6">
                         <label for="agama">Agama</label>
-                        <input type="text" name="agama" class="form-control" placeholder="Agama" readonly>
+                        <input type="text" name="agama" class="form-control" placeholder="Agama" >
                     </div>
                     <div class="col-lg-6">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
-                        <input type="text" name="jenis_kelamin" class="form-control" placeholder="Jenis Kelamin" readonly>
+                        <input type="text" name="jenis_kelamin" class="form-control" placeholder="Jenis Kelamin" >
                     </div>
                     <div class="col-lg-6">
                         <label for="goldar">Golongan Darah</label>
-                        <input type="text" name="golongan_darah" class="form-control" placeholder="Golongan Darah" readonly>
+                        <input type="text" name="golongan_darah" class="form-control" placeholder="Golongan Darah" >
                     </div>
                     <div class="col-lg-6">
                         <label for="kebangsaan">Kebangsaan</label>
-                        <input type="text" name="kebangsaan" class="form-control" placeholder="Kebangsaan" readonly>
+                        <input type="text" name="kebangsaan" class="form-control" placeholder="Kebangsaan" >
                     </div>
                     <div class="col-lg-6">
                         <label for="pekerjaan">Pekerjaan</label>
-                        <input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan" readonly>
+                        <input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan" >
                     </div>
                     <div class="col-lg-6">
                         <label for="pendidikan">Pendidikan</label>
-                        <input type="text" name="pendidikan" class="form-control" placeholder="Pendidikan" readonly>
+                        <input type="text" name="pendidikan" class="form-control" placeholder="Pendidikan" >
                     </div>
                     <div class="col-lg-6">
                         <label for="status">Status Pernikahan</label>
-                        <input type="text" name="status_pernikahan" class="form-control" placeholder="Status Pernikahan" readonly>
+                        <input type="text" name="status_kawin" class="form-control" placeholder="Status Pernikahan" >
                     </div>
                     <div class="col-lg-3">
                         <label for="rw">RW</label>
-                        <input type="text" name="id_rw" class="form-control" placeholder="RW" readonly>
+                        <input type="text" name="id_rw" class="form-control" placeholder="RW" >
                     </div>
                     <div class="col-lg-3">
                         <label for="rw">RT</label>
-                        <input type="text" name="id_rt" class="form-control" placeholder="RT" readonly>
+                        <input type="text" name="id_rt" class="form-control" placeholder="RT" >
                     </div>
                     <div class="col-lg-6">
                         <label for="captcha">Masukkan Captcha</label><br>
@@ -75,11 +76,46 @@
                         <input type="text" name="captcha" class="form-control" placeholder="Masukkan Captcha">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary active-button">Simpan</button>
             </form>
+            <div class="d-flex">
+            <button type="button" class="btn btn-primary active-button align-self-center" onclick="store(base_url+'form_ktp/store','#form')">Simpan</button>
+                <div class="spinner-border m-1 align-self-center text-primary d-none" role="status" id="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+                
+            
             
             </div>
         </div>
     </div>
 </div>
+
 <!-- END CONTENT -->
+
+<script>
+function store(url,formID){
+    $('#loading').removeClass('d-none');
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: new FormData($(formID)[0]),
+        dataType: 'json',
+        async : true,
+        contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+        processData: false,
+        success: function(data){
+           if(data.status == 'error'){
+                $('#error-message').removeClass('d-none');
+                $('#error-message').html(data.message);
+                $("html, body").animate({scrollTop:$("#error-message").offset().top - 50}, 500);
+           }
+           else if(data.status == 'success'){
+                window.location.href = data.redirect;
+           }     
+        },
+    });
+    $('#loading').addClass('d-none');
+    $('#loading').addClass('d-none');
+}
+</script>

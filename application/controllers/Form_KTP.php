@@ -18,6 +18,58 @@ class Form_KTP extends Frontend_Controller{
             ['field' => 'nik',
             'label' => 'NIK',
             'rules' => 'required'],
+
+            ['field' => 'nama',
+            'label' => 'Nama',
+            'rules' => 'required'],
+
+            ['field' => 'alamat',
+            'label' => 'Alamat',
+            'rules' => 'required'],
+
+            ['field' => 'tempat_lahir',
+            'label' => 'Tempat Lahir',
+            'rules' => 'required'],
+
+            ['field' => 'tanggal_lahir',
+            'label' => 'Tanggal Lahir',
+            'rules' => 'required'],
+
+            ['field' => 'agama',
+            'label' => 'Agama',
+            'rules' => 'required'],
+            
+            ['field' => 'jenis_kelamin',
+            'label' => 'Jenis Kelamin',
+            'rules' => 'required'],
+
+            ['field' => 'golongan_darah',
+            'label' => 'Golongan Darah',
+            'rules' => 'required'],
+
+            ['field' => 'kebangsaan',
+            'label' => 'Kebangsaan',
+            'rules' => 'required'],
+
+            ['field' => 'pekerjaan',
+            'label' => 'Pekerjaan',
+            'rules' => 'required'],
+
+            ['field' => 'pendidikan',
+            'label' => 'Pendidikan',
+            'rules' => 'required'],
+
+            ['field' => 'status_kawin',
+            'label' => 'Staus Pernikahan',
+            'rules' => 'required'],
+
+            ['field' => 'id_rw',
+            'label' => 'RW',
+            'rules' => 'required'],
+
+            ['field' => 'id_rt',
+            'label' => 'RT',
+            'rules' => 'required'],
         ];
     }
 
@@ -44,16 +96,31 @@ class Form_KTP extends Frontend_Controller{
         if($validation->run()){
             if($this->Form_KTP_M->store()){
                 $this->session->set_flashdata('success_message', 'Pengisian form berhasil, terimakasih');
+                $callback = array(
+                    'status' => 'success',
+                    'message' => 'Data berhasil diinput',
+                    'redirect' => base_url().'form_ktp',
+                );
             }
             else{
-                $this->session->set_flashdata('error_message', 'Mohon maaf, pengisian form gagal');
+                //$this->session->set_flashdata('error_message', 'Mohon maaf, pengisian form gagal');
+                $callback = array(
+                    'status' => 'error',
+                    'message' => 'Mohon Maaf, Pengisian form gagal',
+                );
             }
         }
         else{
-            $this->session->set_flashdata('error_message', validation_errors());
+            //$this->session->set_flashdata('error_message', validation_errors());
+            $callback = array(
+                'status' => 'error',
+                'message' => validation_errors(),
+            );
+
+            
         }
-        
-        redirect(base_url('form_ktp'), 'refresh');
+        echo json_encode($callback);
+        //redirect(base_url('form_ktp'), 'refresh');
     }
 
 }
