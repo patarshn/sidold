@@ -16,7 +16,7 @@ class Form_Kematian_M extends MY_Model
         $data['alamat'] = $_POST['alamat'];
         $data['pekerjaan'] = $_POST['pekerjaan'];
         $data['tanggal_kematian'] = $_POST['tanggal_kematian'];
-        $data['penyebab_kematian'] = $_POST['penyebab_kematian'];
+        $data['penyebab'] = $_POST['penyebab_kematian'];
         $data['tanggal_pengajuan'] = date('Y/m/d h:i:sa');
         $status = $this->db->insert($this->_table,$data) ? true:false;
         return $status;

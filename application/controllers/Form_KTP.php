@@ -7,9 +7,7 @@ class Form_KTP extends Frontend_Controller{
 	{
         parent::__construct();
         $this->load->model('frontend/Form_KTP_M');
-        $this->load->helper('url');
-        $this->load->helper('form');
-		$this->load->library('form_validation');
+        
     }    
     
 

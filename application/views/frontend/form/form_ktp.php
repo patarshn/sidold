@@ -93,29 +93,3 @@
 
 <!-- END CONTENT -->
 
-<script>
-function store(url,formID){
-    $('#loading').removeClass('d-none');
-    $.ajax({
-        type: "POST",
-        url: url,
-        data: new FormData($(formID)[0]),
-        dataType: 'json',
-        async : true,
-        contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
-        processData: false,
-        success: function(data){
-           if(data.status == 'error'){
-                $('#error-message').removeClass('d-none');
-                $('#error-message').html(data.message);
-                $("html, body").animate({scrollTop:$("#error-message").offset().top - 50}, 500);
-           }
-           else if(data.status == 'success'){
-                window.location.href = data.redirect;
-           }     
-        },
-    });
-    $('#loading').addClass('d-none');
-    $('#loading').addClass('d-none');
-}
-</script>

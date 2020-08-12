@@ -19,3 +19,33 @@ $('#about-3').on('click', function() {
     $('#about-3').addClass('active-button');
 });
 */
+
+function store(url,formID){
+    //$('#loading').removeClass('d-none');
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: new FormData($(formID)[0]),
+        dataType: 'json',
+        async : true,
+        contentType: false,
+        processData: false,
+        cache:false,
+        success: function(data){
+           if(data.status == 'error'){
+                $('#error-message').removeClass('d-none');
+                $('#error-message').html(data.message);
+                $("html, body").animate({scrollTop:$("#error-message").offset().top - 50}, 500);
+           }
+           else if(data.status == 'success'){
+                window.location.href = data.redirect;
+           }     
+        },
+    });
+    $('#loading').addClass('d-none');
+}
+
+function alertModal(message){
+    $("#alertModal").modal("show");
+    $("#alertModalMessage").html(message);
+}

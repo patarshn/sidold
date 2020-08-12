@@ -3,7 +3,11 @@
     <div class="row" style="margin-left:0; margin-right:0;">
         <div class="col-lg-8 col-12 konten-form">
             <div class="row">
-            <form>
+            <?php if($this->session->flashdata('success_message')): ?>
+	            <div class="alert alert-success col" id="success-message"><?= $this->session->flashdata('success_message');?></div>
+            <?php endif ?>
+                <div class="alert alert-danger col d-none" id="error-message"></div>
+            <form method="POST" id="form" action="<?=base_url('form_waris/store')?>">
                 <h3>Form Keterangan Waris</h3>
                 <h5 style="margin-top:20px;">Penanggung Jawab</h5>
                 <div class="form-row">
@@ -131,7 +135,13 @@
                     </div>
                 </div>
             </form>
-            <button type="submit" class="btn btn-primary active-button">Simpan</button>
+            <div class="d-flex">
+            <button type="button" class="btn btn-primary active-button align-self-center" onclick="store(base_url+'form_waris/store','#form')">Simpan</button>
+                <div class="spinner-border m-1 align-self-center text-primary d-none" role="status" id="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            </div>
             </div>
         </div>
     </div>

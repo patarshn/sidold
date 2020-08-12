@@ -30,4 +30,8 @@ class Form_KTP_M extends MY_Model
         return $status;
         
     }
+
+    public function getAll(){
+        return $this->db->get($this->_table)->result();
+    }
 }

@@ -2,21 +2,50 @@
 <!-- CAROUSEL -->
 <section id="intro">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <?php
+            $cLen = count($carousel);
+            for($i=0;$i<$cLen;$i++){
+                if($i == 0){
+                    echo '<li data-target="#carouselExampleCaptions" data-slide-to="'.$i.'" class="active"></li>';
+                }
+                else{
+                    echo '<li data-target="#carouselExampleCaptions" data-slide-to="'.$i.'"></li>';
+                }
+                
+            }
+            ?>
+            
+            
+        </ol>
+        <!--
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
+        -->
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="<?=base_url('assets/my/img/carousel/1.jpg')?>" class="d-block myw-100" alt="">
+            
+            <?php 
+            $count = 0;
+            foreach($carousel as $c): 
+            if($count == 0){
+                echo '<div class="carousel-item active">';
+            }
+            else{
+                echo '<div class="carousel-item">';
+            }
+            $count++;
+            ?>
+                <img src="<?=base_url('assets/'.$c->image)?>" class="d-block myw-100" alt="">
                 <div class="black-overlay">
                     <div class="carousel-caption d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h5><?=$c->title?></h5>
+                        <p><?=$c->description?></p>
                     </div>
                 </div>
             </div>
+            <?php endforeach;?>
+            <!--
             <div class="carousel-item">
                 <img src="<?=base_url('assets/my/img/carousel/2.jpg')?>" class="d-block myw-100" alt="">
                 <div class="black-overlay">
@@ -35,6 +64,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -5,10 +5,9 @@
             <div class="row">
             <?php if($this->session->flashdata('success_message')): ?>
 	            <div class="alert alert-success col" id="success-message"><?= $this->session->flashdata('success_message');?></div>
-            <?php elseif($this->session->flashdata('error_message')): ?>
-                <div class="alert alert-danger col" id="success-message"><?= $this->session->flashdata('error_message');?></div>
-		    <?php endif;?>
-            <form method="POST" action="<?=base_url('form_jualbeli/store')?>">
+            <?php endif ?>
+                <div class="alert alert-danger col d-none" id="error-message"></div>  
+            <form id="form" method="POST" action="<?=base_url('form_jualbeli/store')?>">
                 <h3>Form Keterangan Jual Beli</h3>
                 <h5 style="margin-top:20px;">Penanggung Jawab</h5>
                 <div class="form-row">
@@ -128,8 +127,13 @@
                         <input type="text" name="captcha" class="form-control" placeholder="Masukkan Captcha">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary active-button">Simpan</button>
             </form>
+            <div class="d-flex">
+            <button type="button" class="btn btn-primary active-button align-self-center" onclick="store(base_url+'form_jualbeli/store','#form')">Simpan</button>
+                <div class="spinner-border m-1 align-self-center text-primary d-none" role="status" id="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
             
             </div>
         </div>

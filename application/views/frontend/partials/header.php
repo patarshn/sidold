@@ -10,8 +10,8 @@
    
     <script>
     base_url = "<?=base_url()?>";
-    function base_url(){
-        return "<?=base_url()?>";
+    function base_url(url){
+        return "<?=base_url()?>"+url;
     }
     </script>
 

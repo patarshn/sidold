@@ -25,7 +25,7 @@ class Form_JualBeli extends Frontend_Controller{
 
         $jumbotron = array(
             "jumbotron" => "",
-            "title" => "Form JualBeli"
+            "title" => "Form Jual Beli"
         );
 
         $this->load->view('frontend/partials/header');
@@ -44,16 +44,28 @@ class Form_JualBeli extends Frontend_Controller{
         if($validation->run()){
             if($this->Form_JualBeli_M->store()){
                 $this->session->set_flashdata('success_message', 'Pengisian form berhasil, terimakasih');
+                $callback = array(
+                    'status' => 'success',
+                    'message' => 'Data berhasil diinput',
+                    'redirect' => base_url().'form_jualbeli',
+                );
             }
             else{
-                $this->session->set_flashdata('error_message', 'Mohon maaf, pengisian form gagal');
+                //$this->session->set_flashdata('error_message', 'Mohon maaf, pengisian form gagal');
+                $callback = array(
+                    'status' => 'error',
+                    'message' => 'Mohon Maaf, Pengisian form gagal',
+                );
             }
         }
         else{
-            $this->session->set_flashdata('error_message', validation_errors());
+            //$this->session->set_flashdata('error_message', validation_errors());
+            $callback = array(
+                'status' => 'error',
+                'message' => validation_errors(),
+            );
         }
-        
-        redirect(base_url('form_jualbeli'), 'refresh');
+        echo json_encode($callback);
     }
 
 }
