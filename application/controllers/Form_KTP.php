@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Form_KTP extends Frontend_Controller{
+class Form_ktp extends Frontend_Controller{
 
     function __construct()
 	{
         parent::__construct();
-        $this->load->model('frontend/Form_KTP_M');
+        $this->load->model('frontend/Form_ktp_m');
         
     }    
     
@@ -92,7 +92,7 @@ class Form_KTP extends Frontend_Controller{
         $validation = $this->form_validation;
         $validation->set_rules($this->rulesStore());
         if($validation->run()){
-            if($this->Form_KTP_M->store()){
+            if($this->Form_ktp_m->store()){
                 $this->session->set_flashdata('success_message', 'Pengisian form berhasil, terimakasih');
                 $callback = array(
                     'status' => 'success',

@@ -1,6 +1,6 @@
 <?php
 
-class Form_KTP_M extends MY_Model
+class Form_ktp_m extends MY_Model
 {
     private $_table = 'tbl_form_ktp';
 

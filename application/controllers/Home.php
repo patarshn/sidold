@@ -18,7 +18,8 @@ class Home extends Frontend_Controller{
         $this->load->view('frontend/partials/header');
         $this->load->view('frontend/partials/content_navbar');
         $this->load->view('frontend/partials/content_carousel',$carousel);
-        $this->load->view('frontend/home/index');
+        //$this->load->view('frontend/home/index');
+        $this->load->view('frontend/service/index');
         $this->load->view('frontend/partials/content_footer');
         $this->load->view('frontend/partials/footer');
     }

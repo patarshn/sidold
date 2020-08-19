@@ -9,8 +9,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="https://wonodadi.id">Beranda</a>
-                    <a class="nav-item nav-link" href="<?=base_url()?>">Layanan</a>  
+                    <a class="nav-item nav-link" href="<?=base_url()?>">Beranda</a>
+                    <a class="nav-item nav-link" href="<?=base_url('about')?>">Tentang</a>
+                    <a class="nav-item nav-link" href="<?=base_url('service')?>">Layanan</a>
+                    <a class="nav-item nav-link" href="<?=base_url('news')?>">Informasi</a>
+                    <a class="nav-item nav-link active" href="<?=base_url('gallery')?>">Galeri</a>
+                    <a class="nav-item nav-link" href="<?=base_url('contact')?>">Kontak</a>   
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <?php
 
-class Carousel_M extends MY_Model
+class Carousel_m extends MY_Model
 {
     private $_table = 'carousel';
 

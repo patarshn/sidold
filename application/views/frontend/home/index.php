@@ -3,7 +3,7 @@
     <section id="service">
         <div class="row mt-4">
             <div class="col title">
-                <a href="service.php">Layanan</a><br>
+                <a href="service">Layanan</a><br>
             </div>
         </div>
         <div class="row justify-content-center mt-4">

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Form extends Frontend_Controller{
 
-
+/*
     function __construct()
 	{
         parent::__construct();
@@ -68,5 +68,5 @@ class Form extends Frontend_Controller{
     public function store_form_belummenikah(){
 
     }
-
+*/
 }

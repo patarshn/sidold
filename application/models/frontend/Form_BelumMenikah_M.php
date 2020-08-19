@@ -1,6 +1,6 @@
 <?php
 
-class Form_BelumMenikah_M extends MY_Model
+class Form_belummenikah_m extends MY_Model
 {
     private $_table = 'tbl_form_ketbelummenikah';
 

@@ -1,6 +1,6 @@
 <?php
 
-class Form_TidakMampu_M extends MY_Model
+class Form_tidakmampu_m extends MY_Model
 {
     private $_table = 'tbl_form_kettidakmampu';
 

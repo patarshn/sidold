@@ -13,13 +13,11 @@
                 </div>
             </div>
             <div class="col-lg">
-                <!--
                 <h5>Tautan Cepat</h5>
                 <a href="about.php">Tentang</a>
                 <a href="product.php">Layanan</a>
                 <a href="news.php">Informasi</a>
                 <a href="contact.php">Kontak</a>
-                -->
             </div>
             <div class="col-lg">
                 <h5>Kontak</h5>
@@ -28,7 +26,7 @@
                         <img src="<?=base_url('assets/my/img/icon/Icon material-place.png')?>" alt="Place">
                     </div>
                     <div class="col">
-                        <span>Pekon Wonodadi, Pringsewu, Lampung</span>
+                        <span>Jl. Way Pangubuan No. 16, Pahoman, Kota Bandarlampung, Lampung, 35132</span>
                     </div>
                 </div>
                 <div class="row contact">
@@ -36,7 +34,7 @@
                         <img src="<?=base_url('assets/my/img/icon/Icon zocial-email.png')?>" alt="Email">
                     </div>
                     <div class="col">
-                        <span>inbox@wonodadi.id</span>
+                        <span>company@gmail.com</span>
                     </div>
                 </div>
                 <div class="row contact">
@@ -52,7 +50,7 @@
     </div>
     <div class="copyrights justify-content-center d-flex">
         <div class="col-lg-6">
-            <p>Copyrights © 2020, Pekon Wonodadi. All rights reserved.</p>
+            <p>Copyrights © 2020, Company Name. All rights reserved.</p>
         </div>
     </div>
 </footer>

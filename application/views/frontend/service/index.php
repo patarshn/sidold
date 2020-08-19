@@ -1,39 +1,135 @@
 <!-- CONTENT -->
-<div class="container mt-3">
-        <form>
-            <label for="layanan">Pilih Layanan</label>
-            <div class="form-row">
-                <div class="col-lg-10 col-12">
-                    <div class="form-group">
-                        <select class="form-control" id="layanan">
-                        <option>--Pilih--</option>
-                        <option value="form_izinusaha">Form Izin Usaha</option>
-                        <option value="form_kk">Form KK</option>
-                        <option value="form_ktp">Form KTP</option>
-                        <option value="form_kelahiran">Form Kelahiran</option>
-                        <option value="form_kematian">Form Kematian</option>
-                        <option value="form_tidakmampu">Form Keterangan Tidak Mampu</option>
-                        <option value="form_belummenikah">Form Keterangan Belum Menikah</option>
-                        <option value="form_sudahmenikah">Form Keterangan Sudah Menikah</option>
-                        <option value="form_domisili">Form Keterangan Domisili</option>
-                        <option value="form_jualbeli">Form Jual Beli</option>
-                        <option value="form_waris">Form Keterangan Waris</option>
-                        <option value="form_hibah">Form Keterangan Hibah</option>
-                        </select>
+<div class="container">
+    <section id="service">
+        <div class="row mt-4">
+            <div class="col title">
+                <a href="service">Layanan</a><br>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4 col-12">
+            <div class="col-3-lg mb-4">
+                <a href="form_kk">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img src="<?=base_url('assets/my/img/9.jpg')?>" class="card-img-top" alt="product 1">
+                    <div class="card-body">
+                        <h6>Form KK</h6>
+                    </div>
+                </div>   
+                </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_ktp">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img src="<?=base_url('assets/my/img/3.jpg')?>" class="card-img-top" alt="product 2">
+                    <div class="card-body">
+                        <h6>Form KTP</h6>
                     </div>
                 </div>
-                <div class="col-lg-2 col-2">
-                    <button type="button" class="btn btn-primary active-button" onclick="showPage()">Submit</button>
-                </div>
+            </a>
             </div>
-        </form>
-
-        <script>
-        function showPage() {
-            var sel = document.getElementById('layanan');
-            var option = sel.options[sel.selectedIndex].value;
-            window.location.href=option;
-        }
-        </script>
+            <div class="col-3-lg mb-4">
+            <a href="form_izinusaha">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img src="<?=base_url('assets/my/img/1.jpg')?>" class="card-img-top" alt="product 3">
+                    <div class="card-body">
+                        <h6>Form Izin Usaha</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_kelahiran">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img src="<?=base_url('assets/my/img/7.jpg')?>" class="card-img-top" alt="product 4">
+                    <div class="card-body">
+                        <h6>Form Kelahiran</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_kematian">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                     <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Kematian</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_domisili">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Domisili</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_jualbeli">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Jual Beli</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_waris">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Keterangan Waris</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_hibah">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Keterangan Hibah</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_tidakmampu">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Keterangan Tidak Mampu</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_belummenikah">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Belum Menikah</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-3-lg mb-4">
+            <a href="form_sudahmenikah">
+                <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <img class="card-img-top">
+                    <div class="card-body">
+                        <h6>Form Sudah Menikah</h6>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+        
+    </section>
 </div>
+<!-- END GALERI -->
 <!-- END CONTENT -->

@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Form_Domisili extends Frontend_Controller{
+class Form_domisili extends Frontend_Controller{
 
     function __construct()
 	{
         parent::__construct();
-        $this->load->model('frontend/Form_Domisili_M');
+        $this->load->model('frontend/Form_domisili_m');
         $this->load->helper('url');
         $this->load->helper('form');
 		$this->load->library('form_validation');
@@ -42,7 +42,7 @@ class Form_Domisili extends Frontend_Controller{
         $validation = $this->form_validation;
         $validation->set_rules($this->rulesStore());
         if($validation->run()){
-            if($this->Form_Domisili_M->store()){
+            if($this->Form_domisili_m->store()){
                 $this->session->set_flashdata('success_message', 'Pengisian form berhasil, terimakasih');
                 $callback = array(
                     'status' => 'success',
