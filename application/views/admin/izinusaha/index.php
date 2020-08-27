@@ -48,20 +48,16 @@
             </div>
             <div class="card-body">
               <div class="table-responsive">
-               <form method="POST" id="formdelete" action="/ktp/destroy">
+               <form method="POST" id="formdelete" action="/izinusaha/destroy">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th width="5%">No</th>
                       <th width="3%"></th>
                       <th>NIK</th>
-                      <th>Nama</th>
-                      <th>Alamat</th>
-                      <th>RT</th>
-                      <th>RW</th>
-                      <th width="10%">Verif RT</th>
-                      <th width="10%">Verif RW</th>
-                      <th width="10%">Action</th>
+                      <th>Nama Usaha</th>
+                      <th>Alamat Usaha</th>
+                      <th>Detail</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -69,23 +65,19 @@
                       <th width="5%">No</th>
                       <th width="3%"></th>
                       <th>NIK</th>
-                      <th>Nama</th>
-                      <th>Alamat</th>
-                      <th>RT</th>
-                      <th>RW</th>
-                      <th>Verif RT</th>
-                      <th>Verif RW</th>
-                      <th>Action</th>
+                      <th>Nama Usaha</th>
+                      <th>Alamat Usaha</th>
+                      <th>Detail</th>
                     </tr>
                   </tfoot>
                   <tbody>
                   
                   <?php 
                   $count = 1;
-                  foreach ($ktp as $k): ?>
+                  foreach ($izinusaha as $i): ?>
                     <tr>
                     <td>
-                        <input type="checkbox" name="rowdelete[]" value="<?=$k->id?>" class="rowdelete">
+                        <input type="checkbox" name="rowdelete[]" value="<?=$i->id_form_izinusaha?>" class="rowdelete">
                         <?=$count++;?>
                       </td>
                       <td><div class="dropdown no-arrow">
@@ -100,29 +92,9 @@
                           </div>
                         </div>
                       </td>
-                      <td><?=$k->nik?></td>
-                      <td><?=$k->nama?></td>
-                      <td><?=$k->alamat?></td>
-                      <td><?=$k->id_rt?></td>
-                      <td><?=$k->id_rw?></td>
-                      <td>
-                        <?php if($k->verifikasi_rt == 'Menunggu'):?>
-                            <div class="card bg-gradient-warning text-white text-center">Menunggu</div>
-                        <?php elseif($k->verifikasi_rt == 'Disetujui'):?>
-                            <div class="card bg-gradient-success text-white text-center">Disetujui</div>
-                        <?php elseif($k->verifikasi_rt == 'Ditolak'):?>
-                            <div class="card bg-gradient-danger text-white text-center">Ditolak</div>
-                        <?php endif;?>
-                      </td>
-                      <td>
-                        <?php if($k->verifikasi_rw == 'Menunggu'):?>
-                            <div class="card bg-gradient-warning text-white text-center">Menunggu</div>
-                        <?php elseif($k->verifikasi_rw == 'Disetujui'):?>
-                            <div class="card bg-gradient-success text-white text-center">Disetujui</div>
-                        <?php elseif($k->verifikasi_rw == 'Ditolak'):?>
-                            <div class="card bg-gradient-danger text-white text-center">Ditolak</div>
-                        <?php endif;?>
-                      </td>
+                      <td><?=$i->nik?></td>
+                      <td><?=$i->nama_usaha?></td>
+                      <td><?=$i->alamat_usaha?></td>
                       <td>
                         <div class="card bg-gradient-info text-white text-center">Detail</div>
                       </td>
@@ -156,7 +128,7 @@
         Data yang akan dihapus tidak dapat dikembalikan lagi, konfirmasi untuk menghapus data.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" onclick="store(base_url+'admin/ktp/destroy','#formdelete')">Delete</button>
+        <button type="button" class="btn btn-danger" onclick="store(base_url+'admin/izinusaha/destroy','#formdelete')">Delete</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
     </div>

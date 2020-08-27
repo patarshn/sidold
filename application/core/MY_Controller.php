@@ -7,6 +7,25 @@ class MY_Controller extends CI_Controller {
         parent::__construct();
         
     }
+
+    function printUri(){
+        $segment = $this->uri->segment_array();
+        $uri = base_url();
+        $uriCount = count($segment);
+        $i = 1;
+        foreach ($segment as $s)
+        {
+          //echo $s;
+          //echo '<br />';
+          $uri = $uri.$s.'/';
+          echo '<a href="'.$uri.'">'.ucfirst($s).'</a>';
+          if($i != $uriCount){
+            echo " » ";
+          }
+          $i++;
+        }
+      }
+      
     public function print_uri(){
         $segment = $this->uri->segment_array();
         $uri = base_url();

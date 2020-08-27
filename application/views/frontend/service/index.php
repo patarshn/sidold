@@ -72,7 +72,7 @@
                 <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     <img src="<?=base_url('assets/my/img/12.png')?>" class="card-img-top" alt="product 7">
                     <div class="card-body">
-                        <h6>Form Jual Beli</h6>
+                        <h6>Form Jual Beli</br>(Coming Soon)</h6>
                     </div>
                 </div>
             </a>
@@ -82,7 +82,7 @@
                 <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     <img src="<?=base_url('assets/my/img/13.png')?>" class="card-img-top" alt="product 8">
                     <div class="card-body">
-                        <h6>Form Keterangan Waris</h6>
+                        <h6>Form Keterangan Waris</br>(Coming Soon)</h6>
                     </div>
                 </div>
             </a>
@@ -92,7 +92,7 @@
                 <div class="card" style="border:0; box-shadow:6px 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     <img src="<?=base_url('assets/my/img/14.png')?>" class="card-img-top" alt="product 9">
                     <div class="card-body">
-                        <h6>Form Keterangan Hibah</h6>
+                        <h6>Form Keterangan Hibah</br>(Coming Soon)</h6>
                     </div>
                 </div>
             </a>

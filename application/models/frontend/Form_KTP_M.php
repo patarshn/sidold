@@ -31,7 +31,4 @@ class Form_ktp_m extends MY_Model
         
     }
 
-    public function getAll(){
-        return $this->db->get($this->_table)->result();
-    }
 }

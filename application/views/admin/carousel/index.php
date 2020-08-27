@@ -137,25 +137,3 @@
   </div>
 </div>
 
-<script>
-  $('.rowdelete').click(function(){
-    var len = $('[name="rowdelete[]"]:checked').length;
-    if(len <= 0){
-      $('#deletebtn').html("Delete");
-    }
-    else{
-      $('#deletebtn').html("Delete ("+len+" data)");
-    }
-  });
-
-  $('#deletebtn').click(function(){
-    var len = $('[name="rowdelete[]"]:checked').length;
-    if(len <= 0){
-      alertModal("Tidak ada data yang dipilih");
-    }
-    else{
-      $("#deleteModal").modal("show");
-    }
-  });
-
-</script>

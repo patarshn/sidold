@@ -38,7 +38,7 @@
           <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h6 class="m-0 font-weight-bold text-primary">Pengajuan Kartu Tanda Penduduk</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Pengajuan Domisili</h6>
               <div>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-success">Add</button>
@@ -48,7 +48,7 @@
             </div>
             <div class="card-body">
               <div class="table-responsive">
-               <form method="POST" id="formdelete" action="/ktp/destroy">
+               <form method="POST" id="formdelete" action="/domisili/destroy">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
@@ -82,10 +82,10 @@
                   
                   <?php 
                   $count = 1;
-                  foreach ($ktp as $k): ?>
+                  foreach ($domisili as $d): ?>
                     <tr>
                     <td>
-                        <input type="checkbox" name="rowdelete[]" value="<?=$k->id?>" class="rowdelete">
+                        <input type="checkbox" name="rowdelete[]" value="<?=$d->id_form_domisili?>" class="rowdelete">
                         <?=$count++;?>
                       </td>
                       <td><div class="dropdown no-arrow">
@@ -100,26 +100,26 @@
                           </div>
                         </div>
                       </td>
-                      <td><?=$k->nik?></td>
-                      <td><?=$k->nama?></td>
-                      <td><?=$k->alamat?></td>
-                      <td><?=$k->id_rt?></td>
-                      <td><?=$k->id_rw?></td>
+                      <td><?=$d->nik?></td>
+                      <td><?=$d->nama?></td>
+                      <td><?=$d->alamat?></td>
+                      <td><?=$d->id_rt?></td>
+                      <td><?=$d->id_rw?></td>
                       <td>
-                        <?php if($k->verifikasi_rt == 'Menunggu'):?>
+                        <?php if($d->verifikasi_rt == 'Menunggu'):?>
                             <div class="card bg-gradient-warning text-white text-center">Menunggu</div>
-                        <?php elseif($k->verifikasi_rt == 'Disetujui'):?>
+                        <?php elseif($d->verifikasi_rt == 'Disetujui'):?>
                             <div class="card bg-gradient-success text-white text-center">Disetujui</div>
-                        <?php elseif($k->verifikasi_rt == 'Ditolak'):?>
+                        <?php elseif($d->verifikasi_rt == 'Ditolak'):?>
                             <div class="card bg-gradient-danger text-white text-center">Ditolak</div>
                         <?php endif;?>
                       </td>
                       <td>
-                        <?php if($k->verifikasi_rw == 'Menunggu'):?>
+                        <?php if($d->verifikasi_rw == 'Menunggu'):?>
                             <div class="card bg-gradient-warning text-white text-center">Menunggu</div>
-                        <?php elseif($k->verifikasi_rw == 'Disetujui'):?>
+                        <?php elseif($d->verifikasi_rw == 'Disetujui'):?>
                             <div class="card bg-gradient-success text-white text-center">Disetujui</div>
-                        <?php elseif($k->verifikasi_rw == 'Ditolak'):?>
+                        <?php elseif($d->verifikasi_rw == 'Ditolak'):?>
                             <div class="card bg-gradient-danger text-white text-center">Ditolak</div>
                         <?php endif;?>
                       </td>
@@ -156,7 +156,7 @@
         Data yang akan dihapus tidak dapat dikembalikan lagi, konfirmasi untuk menghapus data.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" onclick="store(base_url+'admin/ktp/destroy','#formdelete')">Delete</button>
+        <button type="button" class="btn btn-danger" onclick="store(base_url+'admin/domisili/destroy','#formdelete')">Delete</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
     </div>

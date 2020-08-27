@@ -11,7 +11,7 @@ class Form_kk_m extends MY_Model
     public function store(){
         $_POST = $this->input->post();
         $data['nik'] = $_POST['nik'];
-
+        $data['tanggal_pengajuan'] = date("Y-m-d h:i:s");
         $status = $this->db->insert($this->_table,$data) ? true:false;
         return $status;
         

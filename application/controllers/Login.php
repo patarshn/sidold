@@ -75,7 +75,7 @@ class Login extends Frontend_Controller{
 
             
         }
-        echo json_encode($callback);
+        redirect(base_url('login'));
         
     }
 

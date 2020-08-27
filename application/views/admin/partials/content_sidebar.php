@@ -35,11 +35,18 @@
         </a>
         <div id="dataPengajuan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item text-wrap" href="">Kartu Tanda Penduduk</a>
-            <a class="collapse-item text-wrap" href="">Kartu Keluarga</a>
-            <a class="collapse-item text-wrap" href="">Surat Kematian</a>
-            <a class="collapse-item text-wrap" href="">Surat Kelahiran</a>
-            <a class="collapse-item text-wrap" href="">Surat Keterangan Tidak Mampu</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/ktp')?>">Kartu Tanda Penduduk</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/kk')?>">Kartu Keluarga</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/izinusaha')?>">Surat Izin Usaha</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/kelahiran')?>">Surat Kelahiran</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/kematian')?>">Surat Kematian</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/domisili')?>">Surat Domisili</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/jualbeli')?>">Surat Jual Beli</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/waris')?>">Surat Waris</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/hibah')?>">Surat Hibah</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/sktm')?>">Surat Tidak Mampu</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/sudahmenikah')?>">Surat Sudah Menikah</a>
+            <a class="collapse-item text-wrap" href="<?=base_url('admin/belummenikah')?>">Surat Belum Menikah</a>
           </div>
         </div>
       </li>

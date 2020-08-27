@@ -60,7 +60,7 @@ class Carousel extends Admin_Controller{
 
     function destroy(){
         $_POST = $this->input->post(); 
-        print_r($id);
+        print_r($_POST['rowdelete']);
 
     }
 

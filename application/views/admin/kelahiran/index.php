@@ -38,7 +38,7 @@
           <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h6 class="m-0 font-weight-bold text-primary">Pengajuan Kartu Tanda Penduduk</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Pengajuan Kelahiran</h6>
               <div>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-success">Add</button>
@@ -48,44 +48,44 @@
             </div>
             <div class="card-body">
               <div class="table-responsive">
-               <form method="POST" id="formdelete" action="/ktp/destroy">
+               <form method="POST" id="formdelete" action="/kelahiran/destroy">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th width="5%">No</th>
-                      <th width="3%"></th>
-                      <th>NIK</th>
-                      <th>Nama</th>
-                      <th>Alamat</th>
-                      <th>RT</th>
-                      <th>RW</th>
-                      <th width="10%">Verif RT</th>
-                      <th width="10%">Verif RW</th>
-                      <th width="10%">Action</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th width="5%">No</th>
-                      <th width="3%"></th>
-                      <th>NIK</th>
-                      <th>Nama</th>
-                      <th>Alamat</th>
-                      <th>RT</th>
-                      <th>RW</th>
-                      <th>Verif RT</th>
-                      <th>Verif RW</th>
-                      <th>Action</th>
-                    </tr>
+                        <th width="5%">No</th>
+                        <th width="3%"></th>
+                        <th>NIK</th>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>RT</th>
+                        <th>RW</th>
+                        <th width="10%">Verif RT</th>
+                        <th width="10%">Verif RW</th>
+                        <th width="10%">Action</th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <th width="5%">No</th>
+                        <th width="3%"></th>
+                        <th>NKK</th>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>RT</th>
+                        <th>RW</th>
+                        <th>Verif RT</th>
+                        <th>Verif RW</th>
+                        <th>Action</th>
+                      </tr>
                   </tfoot>
                   <tbody>
                   
                   <?php 
                   $count = 1;
-                  foreach ($ktp as $k): ?>
+                  foreach ($kelahiran as $k): ?>
                     <tr>
                     <td>
-                        <input type="checkbox" name="rowdelete[]" value="<?=$k->id?>" class="rowdelete">
+                        <input type="checkbox" name="rowdelete[]" value="<?=$k->id_form_kelahiran?>" class="rowdelete">
                         <?=$count++;?>
                       </td>
                       <td><div class="dropdown no-arrow">
@@ -100,9 +100,9 @@
                           </div>
                         </div>
                       </td>
-                      <td><?=$k->nik?></td>
+                      <td><?=$k->nkk?></td>
                       <td><?=$k->nama?></td>
-                      <td><?=$k->alamat?></td>
+                      <td><?=$k->tanggal_lahir?></td>
                       <td><?=$k->id_rt?></td>
                       <td><?=$k->id_rw?></td>
                       <td>
@@ -156,7 +156,7 @@
         Data yang akan dihapus tidak dapat dikembalikan lagi, konfirmasi untuk menghapus data.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" onclick="store(base_url+'admin/ktp/destroy','#formdelete')">Delete</button>
+        <button type="button" class="btn btn-danger" onclick="store(base_url+'admin/kelahiran/destroy','#formdelete')">Delete</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
     </div>
